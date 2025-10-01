@@ -39,18 +39,20 @@
       <!-- Hero -->
       <section class="hero" aria-label="Welcome" id="hero">
         <div class="container hero-inner">
-          <div class="hero-copy">
-            <h1>Hello, I'm <span class="accent">BUNNY</span></h1>
-            <p>Professional TikTok live idol, interacting with fans through live streaming, dancing and chatting. Check out my live schedule and photo gallery.</p>
-            <div class="hero-cta">
-              <a class="btn primary" href="#schedule">Live Schedule</a>
-              <a class="btn" href="#gallery">Photo Gallery</a>
+          <div class="hero-image-container">
+            <h1 class="hero-title">Hello, I'm <span class="accent">BUNNY</span></h1>
+            <picture class="hero-media">
+              <source srcset="assets/hero@2x.jpg 2x, assets/hero.jpg 1x" type="image/jpeg/png" />
+              <img src="./assets/hero.png" alt="BUNNY - Cute Rabbit Idol" width="480" height="300" loading="lazy" />
+            </picture>
+            <div class="hero-copy">
+              <p>Professional TikTok live idol, interacting with fans through live streaming, dancing and chatting. Check out my live schedule and photo gallery.</p>
+              <div class="hero-cta">
+                <a class="btn primary" href="#schedule">Live Schedule</a>
+                <a class="btn" href="#gallery">Photo Gallery</a>
+              </div>
             </div>
           </div>
-          <picture class="hero-media">
-            <source srcset="assets/hero@2x.jpg 2x, assets/hero.jpg 1x" type="image/jpeg/png" />
-            <img src="./assets/hero.png" alt="BUNNY - Cute Rabbit Idol" width="480" height="300" loading="lazy" />
-          </picture>
         </div>
       </section>
 
@@ -91,24 +93,42 @@
         <div class="container">
           <h2>Photo Gallery</h2>
           <div class="gallery">
-            <a href="assets/gallery/1.jpg" class="gallery-item" data-caption="Bunny Raiden">
-              <img src="assets/gallery/1.jpg" alt="BUNNY live 1" type="image/jpeg/png" loading="lazy" />
-            </a>
-            <a href="assets/gallery/2.jpg" class="gallery-item" data-caption="Bunny Asuka">
-              <img src="assets/gallery/2.jpg" alt="BUNNY live 2" type="image/jpeg/png" loading="lazy" />
-            </a>
-            <a href="assets/gallery/3.jpg" class="gallery-item" data-caption="Bunny Burnice">
-              <img src="assets/gallery/3.jpg" alt="BUNNY live 3" type="image/jpeg/png" loading="lazy" />
-            </a>
-            <a href="assets/gallery/4.jpg" class="gallery-item" data-caption="Bunny Fox">
-              <img src="assets/gallery/4.jpg" alt="BUNNY live 4" type="image/jpeg/png" loading="lazy" />
-            </a>
-            <a href="assets/gallery/5.jpg" class="gallery-item" data-caption="Bunny Ahri">
-              <img src="assets/gallery/5.jpg" alt="BUNNY live 5" type="image/jpeg/png" loading="lazy" />
-            </a>
-            <a href="assets/gallery/6.jpg" class="gallery-item" data-caption="Bunny Waguri">
-              <img src="assets/gallery/6.jpg" alt="BUNNY live 6" type="image/jpeg/png" loading="lazy" />
-            </a>
+            <div class="gallery-item" data-gallery="1">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_1_ID" alt="BUNNY Gallery 1" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
+            <div class="gallery-item" data-gallery="2">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_2_ID" alt="BUNNY Gallery 2" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
+            <div class="gallery-item" data-gallery="3">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_3_ID" alt="BUNNY Gallery 3" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
+            <div class="gallery-item" data-gallery="4">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_4_ID" alt="BUNNY Gallery 4" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
+            <div class="gallery-item" data-gallery="5">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_5_ID" alt="BUNNY Gallery 5" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
+            <div class="gallery-item" data-gallery="6">
+              <img src="https://drive.google.com/uc?export=view&id=YOUR_MAIN_IMAGE_6_ID" alt="BUNNY Gallery 6" type="image/jpeg/png" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-count">5 photos</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -160,10 +180,16 @@
       </div>
     </footer>
 
-    <div id="lightbox" class="lightbox" hidden>
-      <button class="lightbox-close" aria-label="Close">×</button>
-      <img class="lightbox-image" alt="View larger" />
-      <p class="lightbox-caption"></p>
+
+    <!-- Gallery Popup -->
+    <div id="gallery-popup" class="gallery-popup" hidden>
+      <div class="gallery-popup-content">
+        <button class="gallery-close" aria-label="Close">×</button>
+        <h3 class="gallery-popup-title">Photo Gallery</h3>
+        <div class="gallery-popup-images" id="gallery-popup-images">
+          <!-- Images will be loaded here dynamically -->
+        </div>
+      </div>
     </div>
 
     <!-- OnlyFans Meme Popup -->
